@@ -10,7 +10,7 @@ body {
     height: 100vh;
     padding: 2em 0;
     background-color: hsl(240, 3%, 7%);
-    font-size: clamp(.5rem, 2.3vmin, 1.5rem);
+    font-size: clamp(.9rem, 2.3vmin, 1.5rem);
 }
 
 .container {
@@ -109,7 +109,6 @@ body {
     grid-template-columns: repeat(5, 4em);
     grid-template-rows: repeat(6, 4em);
     grid-gap: .25em;
-    margin-bottom: 1rem;
     justify-content: center;
 }
 
