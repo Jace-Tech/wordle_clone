@@ -10,7 +10,7 @@ body {
     height: 100vh;
     padding: 2em 0;
     background-color: hsl(240, 3%, 7%);
-    font-size: clamp(13px, 2.3vmin, 1.5rem);
+    font-size: clamp(.7rem, 2.3vmin, 1.5rem);
 }
 
 .container {
@@ -37,8 +37,8 @@ body {
 
 .wordle-keyboard {
     display: grid;
-    grid-template-columns: repeat(20, minmax(auto, 1.5em));
-    grid-auto-rows: 3em;
+    grid-template-columns: repeat(20, minmax(1em, 2em));
+    grid-auto-rows: 3.5em;
     grid-gap: .25em;
     justify-content: center;
 }
@@ -107,8 +107,8 @@ body {
     flex: 1;
     font-size: 1rem;
     display: grid;
-    grid-template-columns: repeat(5, 4em);
-    grid-template-rows: repeat(6, 4em);
+    grid-template-columns: repeat(5, 3.8em);
+    grid-template-rows: repeat(6, 3.8em);
     grid-gap: .25em;
     justify-content: center;
 }
@@ -172,7 +172,7 @@ body {
 
 .wordle-message {
     display: block;
-    font-size: 1em;
+    font-size: 1.5em;
     padding: .8em 2em;
     color: #555;
     border-radius: .15em;

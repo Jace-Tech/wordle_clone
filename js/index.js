@@ -61,6 +61,7 @@ const checkResult = (guess, tiles) => {
         return
     }
 
+    startInteraction()
 }
 
 
@@ -119,8 +120,8 @@ const flipTiles = (tile, index, tiles, guess, duration = 500) => {
         tile.classList.remove('flip')
 
         if(index == tiles.length - 1) {
+            // endInteraction()
             checkResult(guess, activeTiles.slice(offset))
-            endInteraction()
             wordCount = 0
         }
 
