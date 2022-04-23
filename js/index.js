@@ -84,11 +84,12 @@ const deleteLetter = () => {
     const activeTiles = [...getAllActiveTiles()]
     const offset = getCurrentRow()
     const lastTile = activeTiles.slice(offset)[activeTiles.slice(offset).length - 1]
-    if(!lastTile) return
 
+    if(!wordCount) return
+
+    wordCount--
     lastTile.classList.remove("active")
     lastTile.innerText = ""
-    wordCount--
     return
 }
 
@@ -97,7 +98,7 @@ const flipTiles = (tile, index, tiles, guess, duration = 500) => {
     const letter = tile.innerText.toLowerCase()
     const activeTiles = [...getAllActiveTiles()]
     const offset = getCurrentRow()
-    const key = [...keys].find(key => key.innerText.toLowerCase().match(letter))
+    const key = [...keys].find(key => key.innerText.toLowerCase().match(letter) && key.innerText.toLowerCase() !== "enter" )
 
     setTimeout(() => {
         tile.classList.add('flip')
@@ -120,7 +121,6 @@ const flipTiles = (tile, index, tiles, guess, duration = 500) => {
         tile.classList.remove('flip')
 
         if(index == tiles.length - 1) {
-            // endInteraction()
             checkResult(guess, activeTiles.slice(offset))
             wordCount = 0
         }
