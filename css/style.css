@@ -103,6 +103,12 @@ body {
     --lightness: 40%;
 }
 
+@media (max-width: 520px) {
+    .wordle-key[data-del] {
+        font-size: 1.2rem;
+    }    
+}
+
 .wordle-screen {
     flex: 1;
     font-size: 1rem;
@@ -180,10 +186,6 @@ body {
     transition: opacity 0.5s ease-in-out;
     background-color: hsl(204, 7%, 85%);
     margin-bottom: .5rem;
-}
-
-.wordle-key:last-of-type {
-    font-size: 1rem;
 }
 
 .wordle-message.hide {
